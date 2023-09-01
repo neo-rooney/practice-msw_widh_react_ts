@@ -7,7 +7,6 @@ export const useUser = () => {
   const fetchUsers = async () => {
     const data = await getUsers();
     setUsers(data.data);
-    console.log(data);
   };
 
   return { users, fetchUsers };

@@ -5,7 +5,11 @@ export default function UserList() {
   const { users, fetchUsers } = useUser();
   useEffect(() => {
     const fetchData = async () => {
-      await fetchUsers();
+      try {
+        await fetchUsers();
+      } catch (e) {
+        console.error(e);
+      }
     };
 
     fetchData();
